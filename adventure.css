@@ -1,0 +1,56 @@
+.journey-launch,.quest-panel,.interact-prompt,.quest-toast,.npc-dialog,.journal-dialog{font-family:var(--f-body);color:var(--silk)}
+.journey-launch{position:absolute;left:18px;bottom:22px;z-index:3;padding:13px 21px;border:1px solid #d2ad65;background:linear-gradient(135deg,#354b3e,#17271f);box-shadow:0 6px 25px #0005;letter-spacing:.13em;color:#f2ddb0;font-size:14px}
+.journey-launch:hover{background:#3b5544}
+.quest-panel{position:absolute;right:18px;top:105px;width:282px;z-index:3;padding:18px 20px;background:linear-gradient(145deg,#192c26f5,#12231ff0);border:1px solid #d8b67760;box-shadow:0 12px 36px #0003;backdrop-filter:blur(12px);pointer-events:auto}
+.quest-eyebrow{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px;font-size:10px;letter-spacing:.18em;color:#cfb889}
+.quest-eyebrow button{font:inherit;color:#dfc592;background:transparent;border:1px solid #d3be8b50;padding:5px 8px;cursor:pointer}
+.quest-panel h2{font-family:var(--f-display);font-size:24px;font-weight:400;letter-spacing:.05em;margin:0 0 12px}
+.quest-panel p{font-size:12px;line-height:1.85;color:#e5e1d0;margin:0 0 16px}
+.quest-bottom{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#dec68c}
+.quest-steps{display:flex;gap:5px;margin:14px 0 12px}.quest-steps span{height:2px;flex:1;background:#8b9b8740}.quest-steps span.done{background:#d7bc7b}
+#save-status{display:block;font-size:9px;letter-spacing:.06em;color:#9cafa0;line-height:1.5}
+.quest-resume{width:100%;margin:0 0 12px;border:1px solid #c9ad7050;background:#314b3b;color:#ecdcb5;padding:8px;letter-spacing:.1em}
+.npc-markers{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.npc-pin{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;gap:5px;pointer-events:auto;border:0;background:transparent;color:#f3dfac;padding:0;transform:translate(-50%,-100%);white-space:nowrap;text-shadow:0 1px 4px #000;font-size:11px;cursor:pointer}
+.npc-pin .pin-symbol{display:grid;place-items:center;width:28px;height:28px;border:1px solid #ccb77899;background:#1d332ceb;box-shadow:0 0 20px #e3bc4a20;font:12px var(--f-body);transform:rotate(45deg)}
+.npc-pin .pin-symbol b{font-weight:400;transform:rotate(-45deg)}
+.npc-pin.active .pin-symbol{color:#25392d;background:#e3c684;border-color:#ffe1a1;box-shadow:0 0 25px #edc86545}
+.npc-pin.active{color:#ffe0a0}
+.quest-waypoint{position:absolute;pointer-events:none;z-index:3;color:#f9e6b5;text-shadow:0 2px 7px #000;font-size:12px;white-space:nowrap;transform:translate(-50%,-50%);background:#172b23c9;border:1px solid #c5a86a7a;padding:7px 11px;border-radius:2px}
+.quest-waypoint.edge::before{content:"";display:inline-block;width:6px;height:6px;border-top:1px solid #e4ca8d;border-right:1px solid #e4ca8d;margin-right:10px;transform:rotate(var(--bearing,45deg))}
+.interact-prompt{position:absolute;left:50%;bottom:110px;transform:translateX(-50%);z-index:4;display:flex;align-items:center;gap:12px;padding:11px 19px;background:#172a22ef;border:1px solid #d1b473;color:#eedbb3;font-size:13px;box-shadow:0 8px 25px #0004;white-space:nowrap}
+.interact-prompt kbd{display:grid;place-items:center;width:26px;height:26px;border:1px solid #d7c28c;font:14px var(--f-body);color:#fff2cd;background:#405340}
+.quest-toast{position:absolute;left:50%;top:105px;transform:translateX(-50%);max-width:calc(100vw - 32px);z-index:8;padding:13px 22px;text-align:center;background:#233d30f0;border:1px solid #d6ba7e;box-shadow:0 8px 28px #0004;color:#f4e4bf;font-size:13px;line-height:1.6;pointer-events:none}
+.npc-dialog,.journal-dialog{border:1px solid #c3a67580;background:#162820;box-shadow:0 25px 90px #0008;box-sizing:border-box;padding:0;color:var(--silk);outline:none}
+.npc-dialog{position:fixed;inset:auto 0 24px;width:min(880px,calc(100vw - 40px));max-width:none;max-height:calc(100dvh - 100px);margin:0 auto;overflow:auto}
+.npc-dialog[open]{display:grid;grid-template-columns:235px 1fr}
+.npc-dialog::backdrop,.journal-dialog::backdrop{background:linear-gradient(#09130d16,#08100c70);backdrop-filter:blur(1px)}
+.dialog-close{position:absolute;right:10px;top:8px;z-index:3;color:#d7c99e;background:#15281edb;border:1px solid #c5b27c50;width:29px;height:29px;font-size:20px;cursor:pointer}
+.dialog-portrait{position:relative;min-height:330px;overflow:hidden;background:#4a4535}
+.dialog-portrait img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.dialog-portrait::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#101e18cf)}
+.dialog-portrait span{position:absolute;z-index:1;bottom:17px;left:20px;color:#ead5aa;letter-spacing:.18em;font-size:11px}
+.dialog-content{padding:29px 38px 24px;background:radial-gradient(ellipse at top right,#334b32a8,transparent 70%)}
+.dialog-role{margin:0 0 8px!important;color:#c7b37e!important;font-size:11px!important;letter-spacing:.22em}
+.dialog-content h2{font:400 34px/1.2 var(--f-display);letter-spacing:.14em;margin:0 0 20px}
+#dialog-text{font-size:14px;line-height:1.95;color:#ebe6d5;white-space:pre-line;margin:0 0 20px;max-width:38em}
+.dialog-choices{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 17px}
+.dialog-choices button{font:12px var(--f-body);color:#e3ce9a;border:1px solid #bba26980;background:#203c2e;padding:11px 15px;text-align:left;cursor:pointer;transition:background .2s}
+.dialog-choices button:first-child{background:#d9bc7b;color:#263628;border-color:#e4cb93}
+.dialog-choices button:hover{background:#52654a;color:#fff0cd}
+.dialog-content small{font-size:9px;color:#94a18b;line-height:1.6}
+.journal-dialog{width:min(760px,calc(100vw - 28px));max-width:none;max-height:85dvh;margin:auto;padding:30px 34px;overflow:auto;background:linear-gradient(145deg,#20392c,#102019)}
+.journal-dialog h2{font:400 32px var(--f-display);margin:0 0 22px;letter-spacing:.08em}.journal-dialog h3{font-size:12px;font-weight:400;color:#c5ad76;letter-spacing:.15em;margin:24px 0 12px}.journal-dialog p{font-size:13px;line-height:1.85;color:#d7d8c5}
+.journal-inventory{display:flex;gap:12px;flex-wrap:wrap}.inventory-item{flex:1;min-width:150px;border:1px solid #c5ad6e4d;background:#10211860;padding:14px}.inventory-item strong{display:block;font-size:17px;font-weight:400;color:#ecd39a;margin-bottom:5px}.inventory-item small{font-size:11px;color:#adb6a0}
+.journal-people{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.journal-person{margin:0;background:#102219;border:1px solid #bfa26740}.journal-person img{display:block;width:100%;height:150px;object-fit:cover;object-position:50% 15%;filter:grayscale(1) brightness(.6)}.journal-person.met img{filter:none}.journal-person figcaption{padding:9px 10px;font-size:12px;line-height:1.6;color:#d7caac}.journal-person small{display:block;font-size:10px;color:#a2af99}
+.journal-reset{font:11px var(--f-body);border:1px solid #b28b6340;background:transparent;color:#b3ad95;padding:8px 12px;margin-top:12px;cursor:pointer}
+body.in-adventure #hint{bottom:18px}body.in-adventure #card{max-width:265px}body.in-dialog #cross{display:none}
+@media(max-width:700px){
+  .quest-panel{right:10px;top:calc(var(--game-hud-bottom,150px) + 8px);width:220px;padding:12px 14px}.quest-panel h2{font-size:19px;margin-bottom:8px}.quest-panel p{font-size:11px;line-height:1.7;margin-bottom:10px}.quest-eyebrow{font-size:9px;margin-bottom:8px}.quest-steps{margin:10px 0 8px}
+  .journey-launch{left:12px;bottom:18px;padding:11px 14px;font-size:12px}.quest-toast{top:calc(var(--game-hud-bottom,150px) + 10px);font-size:12px;width:max-content;max-width:calc(100vw - 24px)}
+  .npc-dialog{inset:auto 0 10px;width:calc(100vw - 20px);max-height:80dvh}.npc-dialog[open]{grid-template-columns:110px 1fr}.dialog-portrait{min-height:300px}.dialog-portrait img{object-position:51% 5%}.dialog-portrait span{left:9px;bottom:12px;font-size:9px;letter-spacing:.08em}.dialog-content{padding:22px 16px 18px}.dialog-content h2{font-size:27px;margin-bottom:13px}.dialog-role{font-size:10px!important}#dialog-text{font-size:12px;line-height:1.8;margin-bottom:15px}.dialog-choices{gap:7px}.dialog-choices button{font-size:11px;padding:10px 11px}.dialog-content small{font-size:8px}
+  .interact-prompt{bottom:190px;font-size:12px;padding:8px 13px;max-width:calc(100vw - 24px)}.interact-prompt kbd{display:none}.quest-waypoint{font-size:10px;padding:6px 8px}
+  .journal-dialog{padding:26px 18px;max-height:88dvh}.journal-dialog h2{font-size:26px}.journal-people{gap:7px}.journal-person img{height:110px}.journal-person figcaption{font-size:10px;padding:7px}.journal-person small{font-size:9px}.inventory-item{min-width:125px;padding:12px}
+  body.in-adventure #mini{width:135px}
+}
+@media(prefers-reduced-motion:reduce){.dialog-choices button{transition:none}}
